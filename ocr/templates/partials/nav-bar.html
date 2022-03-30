@@ -1,0 +1,27 @@
+{% load static %}
+
+<header id="header" class="sticky-top">
+    <div class="container">
+        <nav id="navbar" class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'index' %}">
+                    <img src="{% static 'admin/img/logo.png' %}" alt="logo" height="50">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fa fa-bars" style="color:#2c4964 ;"></i>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                        <li class="nav-item"><a class="nav-link active" href="{% url 'index' %}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'files' %}">Your Files</a></li>
+                        <li class="nav-item"><a class="nav-link " href="{% url 'booktest' %}">Book a Test</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'profile' %}">Profile</a></li>
+                        <li class="nav-item"><a href="{% url 'login' %}" class="signup-btn nav-link">Log In</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
