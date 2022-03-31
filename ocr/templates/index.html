@@ -173,7 +173,8 @@
             <div class="parent-box">
                 <div class="box-two none-box">
                     <div class="close"></div>
-                    <form action="POST" >
+                    <form method="POST" enctype="multipart/form-data">
+    
                         <div class="form-page-one">
                             <h3>Upload Data</h3>
                             <div class="category-box">
@@ -186,26 +187,13 @@
                                     </option>
                                 </select>
                             </div>
-                            <div class="upload-box">
-                                <label for="upload">Upload text</label>
-                                <input type="file" name="upload" id="FileUpload1">
-                            </div>
-                            <input type="button" id="btnUpload" value="continue">
-                        </div>
-                        <div class="form-page-two none-box">
-                            <div>
-                                <h3>Upload Data</h3>
-                                <div class="category-box-two">
-                                    <label for="category-text">FBS</label>
-                                    <input type="text" name="category-text" id="category-text" >
-                                </div>
-                                <div class="btn-handle">
-                                    <input type="button" value="Go back">
-                                    <input type="submit" value="Save">
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+                    {% block content %}
+                    {% endblock %}
+                     </div>
+    
+    </div>
+</form>
+
                 </div>
             </div>
             <!-- End box two -->

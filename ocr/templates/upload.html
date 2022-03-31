@@ -1,0 +1,42 @@
+{% extends 'index.html' %}
+
+
+
+
+{% block content%}
+
+
+<div class="upload-box">
+    {%csrf_token%}
+    <label for="upload">Upload text</label>
+    <input type="file" name="uploadFile">
+</div>
+<input type="submit" id="btnUpload" value="continue">
+   {% if url %}
+
+   
+   <div class="form-page-two none-box">
+       
+    <div>
+        <h3>Upload Data</h3>
+        <div class="category-box-two">
+            <label for="category-text">FBS</label>
+            <input type="text" name="category-text" id="category-text" >
+        </div>
+
+        <div class="btn-handle">
+            {{form.as_p }}
+            <input type="button" value="Go back">
+            <input type="submit" value="Save">
+        </div>
+    </div>
+
+   {%endif %}
+
+
+
+{% endblock %} 
+
+
+
+
