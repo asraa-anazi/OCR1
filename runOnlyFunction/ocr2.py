@@ -11,20 +11,26 @@ def find_word(line, keyword):
             'Random Blood Suger', 
             'Random Blood Glucose', 
             'Plasma Glucose Random',
-            'Random Glucose', 
+            'Random Glucose',
+            'Glucose'
             ]
+
 
     FBS = ['FBS', 
     'Fasting Blood Suger', 
     'Fasting Blood Glucose', 
     'Plasma Glucose Fasting',
-    'Fasting Glucose'
+    'Fasting Glucose',
+    'Glucose'
     ]
-    list_of_words = FBS if keyword == "FBS" else RBS
+    
 
+    list_of_words = FBS if keyword == "FBS" else RBS
     res = None
     for word in list_of_words:
         if word.lower() in line.lower():
+            if word.lower() == "Glucose".lower() and len("Glucose")==len(line):
+                continue
             res = line
             break
     return res
@@ -61,4 +67,4 @@ def get_fasting_glucos(pdf_file_name, keyword):
 
 
 
-print (get_fasting_glucos('m.pdf', 'RBS'))
+print(get_fasting_glucos('G.pdf', 'RBS'))
