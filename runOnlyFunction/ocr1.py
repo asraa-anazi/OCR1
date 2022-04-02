@@ -19,7 +19,8 @@ def find_word(line, keyword):
     'Fasting Blood Glucose', 
     'Plasma Glucose Fasting',
     'Fasting Glucose',
-    'FASTING GLUCOSE'
+    'FASTING GLUCOSE',
+    
     ]
     list_of_words = FBS if keyword == "FBS" else RBS
 
@@ -54,4 +55,4 @@ def get_fasting_glucos(pdf_file_name, keyword):
 
     return re.findall(r"[+-]? *(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?", res)[0].strip()
     
-print (get_fasting_glucos('m.pdf', 'FBS'))
+print (get_fasting_glucos('G.pdf', 'FBS'))
